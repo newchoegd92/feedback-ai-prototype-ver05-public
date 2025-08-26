@@ -8,7 +8,7 @@ from google.oauth2 import service_account
 from google.cloud import storage
 
 # ---------- 기본 설정 ----------
-st.set_page_config(page_title="학습 피드백 제출", page_icon="📝", layout="centered")
+st.set_page_config(page_title="학습 피드백 AI", page_icon="🐸", layout="centered")
 
 PROJECT_ID = st.secrets.get("project_id")
 LOCATION   = st.secrets.get("location", "us-central1")
@@ -41,7 +41,7 @@ def call_model(model_name: str, prompt_text: str) -> str:
     return resp.text or ""
 
 # ---------- UI ----------
-st.title("📝 학습 피드백 제출 (Public)")
+st.title("🐸 개구리 학습 피드백")
 st.caption("입력하신 내용은 익명으로 수집되어 서비스 개선에 활용될 수 있습니다.")
 prompt = st.text_area("학생의 상황을 자세히 입력해주세요:", height=180)
 
